@@ -1,0 +1,564 @@
+<!--
+  LMDG Logistics - Static Website
+  How to run:
+  - Simply open this file (index.html) in your browser. No build needed.
+  - Uses Tailwind CSS via CDN and vanilla JavaScript (assets/js/main.js).
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LMDG Logistics | Specialized Manpower for Forklifts, Cranes & Logistics Operations</title>
+    <meta name="description" content="LMDG Logistics provides certified forklift, crane, warehouse and logistics manpower across India. Flexible staffing models, safety-first, fast ramp-up, and pan-India deployment." />
+    <link rel="canonical" href="https://lmdglogistics.com/" />
+    <meta property="og:title" content="LMDG Logistics | Specialized Manpower for Logistics & Industrial Operations" />
+    <meta property="og:description" content="Certified operators and logistics manpower for warehouses, plants, ports, and construction sites." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lmdglogistics.com/" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: '#0f766e', 600: '#0f766e', 700: '#0d5f59' }, /* deep teal */
+              accent: { DEFAULT: '#f59e0b' }, /* amber/orange */
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+  </head>
+  <body class="font-sans text-slate-800">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#home" class="flex items-center gap-2">
+            <div class="h-9 w-9 rounded bg-primary flex items-center justify-center">
+              <span class="text-white font-extrabold">L</span>
+            </div>
+            <span class="font-semibold text-slate-900">LMDG Logistics</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#home" class="hover:text-primary">Home</a>
+            <a href="#about" class="hover:text-primary">About</a>
+            <a href="#services" class="hover:text-primary">Services</a>
+            <a href="#industries" class="hover:text-primary">Industries</a>
+            <a href="#why-us" class="hover:text-primary">Why Us</a>
+            <a href="#process" class="hover:text-primary">Process</a>
+            <a href="#clients" class="hover:text-primary">Clients</a>
+            <a href="#candidates" class="hover:text-primary">Candidates</a>
+            <a href="#contact" class="hover:text-primary">Contact</a>
+          </nav>
+          <div class="hidden md:block">
+            <a href="#clients" class="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Request Manpower</a>
+          </div>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Open Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div class="px-4 py-3 grid gap-2 text-sm">
+          <a href="#home" class="block py-2 hover:text-primary">Home</a>
+          <a href="#about" class="block py-2 hover:text-primary">About</a>
+          <a href="#services" class="block py-2 hover:text-primary">Services</a>
+          <a href="#industries" class="block py-2 hover:text-primary">Industries</a>
+          <a href="#why-us" class="block py-2 hover:text-primary">Why Us</a>
+          <a href="#process" class="block py-2 hover:text-primary">Process</a>
+          <a href="#clients" class="block py-2 hover:text-primary">Clients</a>
+          <a href="#candidates" class="block py-2 hover:text-primary">Candidates</a>
+          <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+          <a href="#clients" class="mt-2 inline-flex w-max items-center rounded-md bg-primary px-4 py-2 text-white">Request Manpower</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div class="grid lg:grid-cols-2 items-center gap-10">
+          <div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+              Specialized Manpower for Forklifts, Cranes & Logistics Operations
+            </h1>
+            <p class="mt-4 text-lg text-slate-600">
+              LMDG Logistics provides certified operators and logistics manpower for warehouses, plants, ports, and construction sites.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#clients" class="inline-flex items-center rounded-md bg-primary px-5 py-3 text-white font-semibold shadow hover:bg-primary-700">Request Manpower</a>
+              <a href="#services" class="inline-flex items-center rounded-md border border-slate-300 px-5 py-3 text-slate-700 font-semibold hover:bg-slate-50">Explore Our Services</a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] w-full rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                alt="Warehouse and logistics operations with forklifts and material handling equipment" 
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+              <!-- To use your own image, replace the src above with: src="./assets/images/hero-image.jpg" -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">About LMDG Logistics</h2>
+            <div class="mt-4 space-y-4 text-slate-700">
+              <p>LMDG Logistics is a specialized manpower partner for logistics operations across warehouses, industrial plants, ports, and infrastructure projects. We focus exclusively on material handling equipment operators, logistics workforce, and driver solutions.</p>
+              <p>Safety and reliability are at the core of our operations. Our operators are trained and compliant with client safety norms, ensuring smooth onsite execution and minimal downtime.</p>
+              <p>We build long-term partnerships with clients to support critical operations, offering flexible engagement models tailored to project needs and timelines.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-lg border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold text-primary">250+</div>
+              <div class="text-sm text-slate-600">Equipment operators available</div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold text-primary">40+</div>
+              <div class="text-sm text-slate-600">Client locations served</div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold text-primary">24x7</div>
+              <div class="text-sm text-slate-600">Shift coverage</div>
+            </div>
+            <div class="rounded-lg border border-slate-200 p-4">
+              <div class="text-2xl font-extrabold text-primary">Pan-India</div>
+              <div class="text-sm text-slate-600">Deployment capability</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Our Services</h2>
+        <p class="mt-2 text-slate-600">Specialized staffing for logistics and industrial operations.</p>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Category A -->
+          <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 16l3 3h12l3-3M6 19v-6a2 2 0 012-2h3V7h3l3 4v8" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Material Handling Equipment Operators</h3>
+            </div>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>Forklift Operators (battery, diesel, LPG, reach truck, VNA)</li>
+              <li>Crane Operators (mobile, EOT/gantry, tower)</li>
+              <li>Other Operators (JCB, excavator, loaders, pallet trucks, stackers, boom/scissor lifts)</li>
+            </ul>
+          </div>
+          <!-- Category B -->
+          <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M5 7v10a2 2 0 002 2h10a2 2 0 002-2V7" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Logistics & Warehouse Manpower</h3>
+            </div>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>Warehouse Operators (pickers, packers, sorters, scanning)</li>
+              <li>Loaders & Unloaders / Material Handlers</li>
+              <li>Storekeepers & Inventory Controllers</li>
+              <li>Dispatch / Documentation Assistants</li>
+              <li>Yard Marshals & Dock Supervisors</li>
+            </ul>
+          </div>
+          <!-- Category C -->
+          <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 13h18M5 13V8a2 2 0 012-2h5l2 2h3a2 2 0 012 2v5" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Driver Manpower Solutions</h3>
+            </div>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>HMV & LMV Drivers (trailers, containers, long-haul)</li>
+              <li>Staff transport drivers</li>
+              <li>In-plant utility vehicle drivers (tugs, tractors)</li>
+            </ul>
+          </div>
+          <!-- Category D -->
+          <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Industrial & Project Support</h3>
+            </div>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>Riggers & Signalers for heavy-lift operations</li>
+              <li>Technical Helpers and O&amp;M support staff</li>
+              <li>Short-term / shutdown manpower for maintenance & peaks</li>
+            </ul>
+          </div>
+          <!-- Category E -->
+          <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 10v4M3 12h4m10 0h4" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Value-Added Manpower Services</h3>
+            </div>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+              <li>Contract staffing (short-term, long-term, project-based)</li>
+              <li>Shift-based deployment (single, double, 24x7)</li>
+              <li>Training & certification support</li>
+              <li>Payroll & statutory compliance (PF, ESIC, etc.)</li>
+              <li>On-site supervisor / single point of contact</li>
+              <li>Regular reporting & basic MIS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section id="industries" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Industries We Serve</h2>
+        <p class="mt-2 text-slate-600">Tailored manpower solutions across key sectors.</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Each card -->
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Warehousing & 3PL</h3>
+            <p class="mt-2 text-sm text-slate-700">Skilled operators and warehouse staff to run efficient storage and movement operations.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">E-commerce Fulfilment</h3>
+            <p class="mt-2 text-sm text-slate-700">Pickers, packers, sorters, and MHE operators for fast order processing and dispatch.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Manufacturing Plants</h3>
+            <p class="mt-2 text-sm text-slate-700">In-plant logistics manpower ensuring continuous material flow and safe handling.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Ports & ICDs</h3>
+            <p class="mt-2 text-sm text-slate-700">Crane operators, drivers, and ground staff familiar with port safety and operations.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Construction & Infrastructure</h3>
+            <p class="mt-2 text-sm text-slate-700">Certified operators and riggers for heavy lifts and site logistics.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 p-6">
+            <h3 class="font-semibold text-slate-900">Power & Utilities</h3>
+            <p class="mt-2 text-sm text-slate-700">Experienced manpower for plant operations support and shutdown maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Why Choose LMDG Logistics</h2>
+        <p class="mt-2 text-slate-600">Focused expertise and reliable service, built for operations.</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Specialized Operator Pool</h3>
+            <p class="mt-2 text-sm text-slate-700">Dedicated to forklift, crane, and logistics-focused manpower with relevant experience.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Safety & Compliance First</h3>
+            <p class="mt-2 text-sm text-slate-700">Trained personnel with adherence to client safety protocols and site norms.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Fast Ramp-Up</h3>
+            <p class="mt-2 text-sm text-slate-700">Mobilize teams quickly for new sites, seasonal peaks, or expansion phases.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Flexible Engagement Models</h3>
+            <p class="mt-2 text-sm text-slate-700">Short-term, long-term, project, or outsourced models based on your needs.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Transparent Operations</h3>
+            <p class="mt-2 text-sm text-slate-700">Clear reporting on attendance and billing with predictable processes.</p>
+          </div>
+          <div class="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 class="font-semibold text-slate-900">Pan-India Network</h3>
+            <p class="mt-2 text-sm text-slate-700">Ability to deploy manpower across multiple locations in India.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Our Process</h2>
+        <p class="mt-2 text-slate-600">End-to-end ownership of manpower quality and continuity.</p>
+        <div class="mt-8 grid gap-6 md:grid-cols-5">
+          <div class="relative rounded-xl border border-slate-200 p-5">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">1</div>
+              <h3 class="font-semibold">Understand Requirement</h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">Capture location, manpower type, volume, and shift pattern.</p>
+          </div>
+          <div class="relative rounded-xl border border-slate-200 p-5">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">2</div>
+              <h3 class="font-semibold">Search & Shortlist</h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">Identify suitable operators from our database and network.</p>
+          </div>
+          <div class="relative rounded-xl border border-slate-200 p-5">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">3</div>
+              <h3 class="font-semibold">Client Interview & Selection</h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">Facilitate interviews and approvals as required.</p>
+          </div>
+          <div class="relative rounded-xl border border-slate-200 p-5">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">4</div>
+              <h3 class="font-semibold">Deployment & Onboarding</h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">Joining formalities, safety induction, and site orientation.</p>
+          </div>
+          <div class="relative rounded-xl border border-slate-200 p-5">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">5</div>
+              <h3 class="font-semibold">Performance & Support</h3>
+            </div>
+            <p class="mt-3 text-sm text-slate-700">Regular feedback, replacements if needed, and reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients: Request Manpower -->
+    <section id="clients" class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Client Form Card -->
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">For Clients</h2>
+                <p class="text-sm text-slate-600 mt-0.5">Request Manpower</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 mb-6">Share your requirement and our team will get back within 24 hours.</p>
+            <form id="clientForm" class="grid grid-cols-1 gap-4">
+              <div>
+                <label for="companyName" class="block text-sm font-medium">Company Name<span class="text-rose-600">*</span></label>
+                <input id="companyName" name="companyName" type="text" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="Your Company Pvt Ltd" />
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contactPerson" class="block text-sm font-medium">Contact Person<span class="text-rose-600">*</span></label>
+                  <input id="contactPerson" name="contactPerson" type="text" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="Full Name" />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium">Email<span class="text-rose-600">*</span></label>
+                  <input id="email" name="email" type="email" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="name@company.com" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phone" class="block text-sm font-medium">Phone<span class="text-rose-600">*</span></label>
+                  <input id="phone" name="phone" type="tel" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="+91-XXXXXXXXXX" />
+                </div>
+                <div>
+                  <label for="city" class="block text-sm font-medium">Location / City<span class="text-rose-600">*</span></label>
+                  <input id="city" name="city" type="text" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="City" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="manpowerType" class="block text-sm font-medium">Type of Manpower Needed</label>
+                  <select id="manpowerType" name="manpowerType" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-white">
+                    <option>Forklift Operators</option>
+                    <option>Crane Operators</option>
+                    <option>Warehouse Staff</option>
+                    <option>Drivers</option>
+                    <option>Project/Shutdown Manpower</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="numResources" class="block text-sm font-medium">Number of Resources<span class="text-rose-600">*</span></label>
+                  <input id="numResources" name="numResources" type="number" min="1" required class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" placeholder="e.g., 10" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="duration" class="block text-sm font-medium">Duration</label>
+                  <select id="duration" name="duration" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-white">
+                    <option>Less than 1 month</option>
+                    <option>1–6 months</option>
+                    <option>6–12 months</option>
+                    <option>More than 12 months</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="details" class="block text-sm font-medium">Additional Details</label>
+                  <textarea id="details" name="details" rows="2" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors resize-none" placeholder="Shift pattern, start date, special requirements..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-700 transition-colors">Submit Requirement</button>
+              <p id="clientSuccess" class="hidden mt-3 rounded-md bg-green-50 p-3 text-green-700 border border-green-200 text-sm">Thank you, we've received your requirement. Our team will contact you shortly.</p>
+            </form>
+          </div>
+          <!-- Candidate Form Card -->
+          <div id="candidates" class="scroll-mt-24 bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-10 w-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">For Candidates</h2>
+                <p class="text-sm text-slate-600 mt-0.5">Join Our Workforce</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 mb-6">Forklift/crane operators, drivers, and warehouse staff can register with basic details.</p>
+            <form id="candidateForm" class="grid grid-cols-1 gap-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                  <input id="fullName" name="fullName" type="text" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors" placeholder="Your Name" />
+                </div>
+                <div>
+                  <label for="candidatePhone" class="block text-sm font-medium">Phone</label>
+                  <input id="candidatePhone" name="candidatePhone" type="tel" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors" placeholder="+91-XXXXXXXXXX" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="candidateEmail" class="block text-sm font-medium">Email</label>
+                  <input id="candidateEmail" name="candidateEmail" type="email" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label for="candidateCity" class="block text-sm font-medium">Current City</label>
+                  <input id="candidateCity" name="candidateCity" type="text" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors" placeholder="City" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="primarySkill" class="block text-sm font-medium">Primary Skill / Role</label>
+                  <select id="primarySkill" name="primarySkill" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors bg-white">
+                    <option>Forklift Operator</option>
+                    <option>Crane Operator</option>
+                    <option>Driver</option>
+                    <option>Warehouse Staff</option>
+                    <option>Rigger/Helper</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="experienceYears" class="block text-sm font-medium">Years of Experience</label>
+                  <input id="experienceYears" name="experienceYears" type="number" min="0" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors" placeholder="e.g., 3" />
+                </div>
+              </div>
+              <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 text-slate-900 font-semibold hover:bg-amber-500/90 transition-colors">Register Interest</button>
+              <p id="candidateSuccess" class="hidden mt-3 rounded-md bg-green-50 p-3 text-green-700 border border-green-200 text-sm">Thank you. Your details have been recorded. We will reach out as suitable roles open.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Contact</h2>
+        <div class="mt-6 grid lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div class="rounded-xl border border-slate-200 p-6">
+              <h3 class="font-semibold text-slate-900">LMGD Logestics Private Limited</h3>
+              <p class="mt-2 text-sm text-slate-700">907, Emaar Palm Square, Sector-66, Golf Course Extension Road, Gurgaon-122102</p>
+              <p class="mt-1 text-sm text-slate-700">Phone: +91124 4023914</p>
+              <p class="mt-1 text-sm text-slate-700">Email: info@lmgdlogestics.com</p>
+              <!-- Optional map placeholder -->
+              <!-- <div class="mt-4 aspect-[16/9] rounded-lg bg-slate-100"></div> -->
+            </div>
+          </div>
+          <div>
+            <div class="rounded-xl border border-slate-200 p-6 bg-slate-50">
+              <h4 class="font-semibold text-slate-900">Quick Links</h4>
+              <ul class="mt-3 space-y-2 text-sm">
+                <li><a class="hover:text-primary" href="#services">Services</a></li>
+                <li><a class="hover:text-primary" href="#industries">Industries</a></li>
+                <li><a class="hover:text-primary" href="#why-us">Why Us</a></li>
+                <li><a class="hover:text-primary" href="#clients">Request Manpower</a></li>
+              </ul>
+              <h4 class="mt-6 font-semibold text-slate-900">Follow</h4>
+              <div class="mt-3 flex items-center gap-3">
+                <a href="#" aria-label="LinkedIn" class="h-9 w-9 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 6.5a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/><path d="M9.12 9h3.12v1.53h.04c.44-.83 1.52-1.7 3.14-1.7 3.36 0 3.98 2.21 3.98 5.08V20h-3.25v-4.43c0-1.06-.02-2.43-1.48-2.43-1.49 0-1.72 1.16-1.72 2.35V20H9.12V9zM4 9h3.25V20H4V9z"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="h-9 w-9 rounded-full bg-white border border-slate-200 flex items-center justify-center hover:bg-slate-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.92a8.15 8.15 0 01-2.36.65 4.12 4.12 0 001.8-2.28 8.22 8.22 0 01-2.6.99 4.1 4.1 0 00-7 3.74A11.64 11.64 0 013 4.89a4.1 4.1 0 001.27 5.47 4.09 4.09 0 01-1.86-.52v.05a4.1 4.1 0 003.29 4.02 4.12 4.12 0 01-1.85.07 4.1 4.1 0 003.83 2.85A8.24 8.24 0 012 19.54a11.62 11.62 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.35-.01-.53A8.34 8.34 0 0022 5.92z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-slate-600">© <span id="year"></span> LMDG Logistics. All Rights Reserved.</p>
+        <nav class="flex items-center gap-4 text-sm">
+          <a href="#home" class="hover:text-primary">Home</a>
+          <a href="#services" class="hover:text-primary">Services</a>
+          <a href="#industries" class="hover:text-primary">Industries</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
+
+
