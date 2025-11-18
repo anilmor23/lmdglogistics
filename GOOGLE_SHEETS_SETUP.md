@@ -1,6 +1,6 @@
 # Google Sheets Integration Setup Guide
 
-This guide will help you set up Google Sheets to store form submissions from your LMDG Logistics website.
+This guide will help you set up Google Sheets to store form submissions from your LMGD Logistics website.
 
 ## Overview
 
@@ -18,7 +18,7 @@ Each form needs its own Google Sheet and Google Apps Script.
 
 1. Go to [Google Sheets](https://sheets.google.com)
 2. Create a new spreadsheet
-3. Name it: **"LMDG Client Requirements"** (or any name you prefer)
+3. Name it: **"LMGD Client Requirements"** (or any name you prefer)
 4. In Row 1, add these column headers:
    ```
    Timestamp | Company Name | Contact Person | Email | Phone | City | Manpower Type | Number of Resources | Duration | Additional Details
@@ -28,7 +28,7 @@ Each form needs its own Google Sheet and Google Apps Script.
 ### Create Sheet 2: Candidate Registrations
 
 1. Create another new spreadsheet
-2. Name it: **"LMDG Candidate Registrations"** (or any name you prefer)
+2. Name it: **"LMGD Candidate Registrations"** (or any name you prefer)
 3. In Row 1, add these column headers:
    ```
    Timestamp | Full Name | Phone | Email | Current City | Primary Skill | Years of Experience
@@ -46,10 +46,10 @@ Each form needs its own Google Sheet and Google Apps Script.
 3. Delete the default code
 4. Open the file `google-apps-script-client-form.gs` from this project
 5. Copy the entire code and paste it into the Google Apps Script editor
-6. **Important:** Replace `'YOUR_SHEET_NAME'` with your actual sheet name (e.g., `'LMDG Client Requirements'`)
+6. **Important:** Replace `'YOUR_SHEET_NAME'` with your actual sheet name (e.g., `'LMGD Client Requirements'`)
 7. If your sheet tab is not named "Sheet1", also replace `'Sheet1'` with your tab name
 8. Click **"Save"** (Ctrl+S or Cmd+S)
-9. Name the project: **"LMDG Client Form Handler"**
+9. Name the project: **"LMGD Client Form Handler"**
 
 ### For Candidate Registration Form
 
@@ -57,10 +57,10 @@ Each form needs its own Google Sheet and Google Apps Script.
 2. Delete the default code
 3. Open the file `google-apps-script-candidate-form.gs` from this project
 4. Copy the entire code and paste it into the Google Apps Script editor
-5. **Important:** Replace `'YOUR_SHEET_NAME'` with your actual sheet name (e.g., `'LMDG Candidate Registrations'`)
+5. **Important:** Replace `'YOUR_SHEET_NAME'` with your actual sheet name (e.g., `'LMGD Candidate Registrations'`)
 6. If your sheet tab is not named "Sheet1", also replace `'Sheet1'` with your tab name
 7. Click **"Save"** (Ctrl+S or Cmd+S)
-8. Name the project: **"LMDG Candidate Form Handler"**
+8. Name the project: **"LMGD Candidate Form Handler"**
 
 ---
 
@@ -68,7 +68,7 @@ Each form needs its own Google Sheet and Google Apps Script.
 
 ### Deploy Client Form Script
 
-1. In the **"LMDG Client Form Handler"** project, click **"Deploy"** → **"New deployment"**
+1. In the **"LMGD Client Form Handler"** project, click **"Deploy"** → **"New deployment"**
 2. Click the gear icon ⚙️ next to "Select type"
 3. Choose **"Web app"**
 4. Configure:
@@ -81,7 +81,7 @@ Each form needs its own Google Sheet and Google Apps Script.
 
 ### Deploy Candidate Form Script
 
-1. In the **"LMDG Candidate Form Handler"** project, click **"Deploy"** → **"New deployment"**
+1. In the **"LMGD Candidate Form Handler"** project, click **"Deploy"** → **"New deployment"**
 2. Click the gear icon ⚙️ next to "Select type"
 3. Choose **"Web app"**
 4. Configure:
@@ -184,7 +184,7 @@ Details: ${data.details}
 
 MailApp.sendEmail({
   to: 'your-email@example.com', // Replace with your email
-  subject: 'New Client Requirement - LMDG Logistics',
+  subject: 'New Client Requirement - LMGD Logistics',
   body: emailBody
 });
 ```

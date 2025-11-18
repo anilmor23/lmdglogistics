@@ -7,16 +7,16 @@ If you're not seeing data in your Google Sheets, follow these steps:
 **This is the most common issue!**
 
 1. Open your Google Apps Script project:
-   - For Client Form: https://script.google.com (find "LMDG Client Form Handler")
-   - For Candidate Form: https://script.google.com (find "LMDG Candidate Form Handler")
+   - For Client Form: https://script.google.com (find "LMGD Client Form Handler")
+   - For Candidate Form: https://script.google.com (find "LMGD Candidate Form Handler")
 
 2. In each script, find this line:
    ```javascript
-   const sheetName = 'LMDG Client Requirements';
+   const sheetName = 'LMGD Client Requirements';
    ```
    or
    ```javascript
-   const sheetName = 'LMDG Candidate Registrations';
+   const sheetName = 'LMGD Candidate Registrations';
    ```
 
 3. **Make sure the sheet name matches EXACTLY** (case-sensitive, including spaces):

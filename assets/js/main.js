@@ -1,4 +1,4 @@
-// Interactivity for LMDG Logistics static site
+// Interactivity for LMGD Logistics static site
 // - Mobile menu toggle
 // - Smooth active link close on click
 // - Forms validation and success messages

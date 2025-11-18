@@ -6,8 +6,8 @@ The updated scripts now use the **Spreadsheet ID** instead of the sheet name. Th
 
 1. Go to [Google Sheets](https://sheets.google.com)
 2. Open your spreadsheet:
-   - "LMDG Client Requirements" (for client form)
-   - "LMDG Candidate Registrations" (for candidate form)
+   - "LMGD Client Requirements" (for client form)
+   - "LMGD Candidate Registrations" (for candidate form)
 
 ## Step 2: Get the Spreadsheet ID from the URL
 
